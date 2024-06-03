@@ -1,0 +1,43 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Graham Laroche, graham_laroche@student.uml.edu
+6/2/2024
+A web page that uses a form to create a multiplication table.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication Table</title>
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Multiplication Table</h1>
+        <p>
+            Enter in values in the form below to generate a multiplication table.<br>
+            Please only enter integer values. The maximum range of collumns and rows is 100.
+        </p>
+    </header>
+    <form>
+        <label for="minCol">Column minimum value:</label><br>
+        <input type="text" id="minCol" name="minCol"><br>
+        <label for="maxCol">Column maximum value:</label><br>
+        <input type="text" id="maxCol" name="maxCol"><br>
+        <label for="minRow">Row minimum value:</label><br>
+        <input type="text" id="minRow" name="minRow"><br>
+        <label for="maxRow">Row maximum value:</label><br>
+        <input type="text" id="maxRow" name="maxRow"><br><br>
+        <input type="button" onclick="validateForm()" id="submitButton" value="Submit">
+        <div>
+            <p id="errorDisplay"></p>
+        </div>
+    </form>
+    <table id="multTable"></table>
+    <!-- scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
